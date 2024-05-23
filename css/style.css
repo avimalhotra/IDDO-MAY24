@@ -16,10 +16,12 @@ html{
     --kus: "Kaushan Script", cursive;
     --y:#fce38a;
     --r:#f38181;
+    --g:#95e1d3;
+    --grad:linear-gradient(to bottom, #f38181, #fce38a);
 }
-body{
-    font: 16px/1.2 var(--rob);
-}
+body{font: 16px/1.2 var(--rob);}
+.kus{ font-family: var(--kus);}
+
 
 .container{
     max-width: 1230px;
@@ -36,7 +38,7 @@ body{
 .col-1{ flex-basis: 8.33%; max-width: 8.33%;}
 .col-2{ flex-basis: 16.66%; max-width: 16.66%;}
 .col-3{ flex-basis: 25%; max-width: 25%;}
-.col-4{ flex-basis: 33.33%; max-width: 33.33%;}
+.col-4{ flex-basis: 33.3339%; max-width: 33.3339%;}
 .col-5{ flex-basis: 41.66%; max-width: 41.66%;}
 .col-6{ flex-basis: 50%; max-width: 50%;}
 .col-7{ flex-basis: 58.33%; max-width: 58.33%;}
@@ -60,6 +62,8 @@ h1{ font-size: 30px;}
 .wrap-1 nav a.active{ color: var(--y); border-block-color: var(--y);}
 .icons li{ margin: 0 28px;}
 .icons a{font-size: 14px; font-weight: 400; display: block; line-height: 30px;}
+.menu{ width: 60px; height: 35px; background: none; border: 2px solid #fff; border-radius: 5px; display: none; }
+.menu span{ display: block; height: 2px; background: #fff; margin: 5px; }
 .slides{ text-align: center; padding: 152px 180px;}
 .slide{ display: none; }
 .slide.active{ display: block;}
@@ -68,10 +72,9 @@ h1{ font-size: 30px;}
 .sep{ width: 60px; height: 3px; background: var(--r); margin: 2rem auto; }
 .wrap-1 .sep{ background: #fff;}
 .slide a{ display: block; margin: auto; width: 160px; border: 3px solid; color: inherit;  font: 700 14px/34px var(--mont);}
-.pager{ }
 .pager .progress{ height: 3px; background: #fff; margin-bottom: 24px; position: relative;}
 .pager .progress::after{content: ''; background: var(--r); position: absolute; left: 0; bottom: 0; top: 0; width: 0;}
-.pager .active .progress::after{ animation: prog 4s 1 linear;}
+.pager .active .progress::after{ animation: prog 5s 1 linear;}
 .pager p{ font-size: 18px;}
 .pager p b{ font-size: 24px;}
 @keyframes prog{
@@ -80,10 +83,33 @@ h1{ font-size: 30px;}
 }
 
 
+.wrap-2{ padding: 90px 0 80px; background: #fff; text-align: center; color: #333;}
+section .kus{ font-size: 24px;}
+section  h2{ font-size: 30px; margin: 23px 0 41px;} 
+.para{ font: 15px/24px var(--rob); color: #999;}
+.about{ position: relative; margin-bottom: 2rem; }
+.about figcaption{ position: absolute; inset: 0; background: var(--grad); opacity: .9; place-items: center; color: #fff; display: grid; transition: .3s; opacity: 0; visibility: hidden; }
+.img-resp{ max-width: 100%; height: auto;}
+.about:hover figcaption{ transform: translate(-10px,-10px); box-shadow: 10px 10px var(--g); opacity: .9; visibility: visible;}
+
+
+.wrap-3{ background: var(--g); text-align: center; padding: 90px 0 60px; color: #fff;}
+.wrap-3 p{ font: 700 72px var(--mont);}
+.wrap-3 small{ font-size: 14px; display: inline-block; margin-bottom: 30px; }
+
+
+.wrap-4{ padding: 90px 0 80px; background: #fff; text-align: center; color: #333;}
+.icon{ width: 90px; text-align: center; margin-top: 40px;}
+.text{ text-align: left; margin: 40px 0;}
+.text h3{ font-size: 14px;}
+.wrap-4 .row{ background: #e5e5e5; gap: 1px 0;}
+.wrap-4 .col-4{ background: #fff;}
+
 
 /* responsive s*/
 @media screen and (max-width:1250px){
     html{ font-size: 13px;}
+    .slides{ padding: 80px 90px}
  }
  @media screen and (max-width:980px){
      .col-t-none{ display: none; }
@@ -99,12 +125,15 @@ h1{ font-size: 30px;}
      .col-t-10{ flex-basis: 83.33%; max-width: 83.33%;}
      .col-t-11{ flex-basis: 91.66%; max-width: 91.66%;}
      .col-t-12{ flex-basis: 100%; max-width: 100%;}
+     .slides{ padding: 80px 0px}
+     .wrap-1 nav li{ margin:  0 16px;}
  }
  @media screen and (max-width:767px){
      html{ font-size: 12px;}
      .col-m-6{ flex-basis: 50%; max-width: 50%;}
      .col-m-12{ flex-basis: 100%; max-width: 100%;}
-    
+     .wrap-1 .lg {font: 700 6rem / 6rem var(--mont)}
+     .icons li{ margin: 0 10px;} 
  }
  @media screen and (max-width:460px){
      .col-p-1{ flex-basis: 8.33%; max-width: 8.33%;}
@@ -119,4 +148,11 @@ h1{ font-size: 30px;}
      .col-p-10{ flex-basis: 83.33%; max-width: 83.33%;}
      .col-p-11{ flex-basis: 91.66%; max-width: 91.66%;}
      .col-p-12{ flex-basis: 100%; max-width: 100%;}
+     nav{ display: none;}
+     .wrap-1 .kus{ font-size: 42px;}
+     .wrap-1 .lg{ font-size: 5rem;}
+     .menu{ display: inline-block; margin-left: 10px;}
+     .pager p{ font-size: 14px;}
+     .pager p b{ font-size: 16px;}
+     .col-auto{ flex-basis: 50%; }
  }
