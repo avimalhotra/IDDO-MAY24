@@ -106,6 +106,43 @@ section  h2{ font-size: 30px; margin: 23px 0 41px;}
 .wrap-4 .col-4{ background: #fff;}
 
 
+.wrap-5{ padding: 100px 0 0 0; background: url(../img/bg-2.webp) no-repeat center/cover; text-align: center; position: relative;}
+.iphone{ transform: translate(-90px, 52px);}
+
+
+.wrap-6{ padding: 100px 0; text-align: center; }
+.wrap-6 img{ margin-top: 80px;}
+.accordion{ text-align: left; margin-top: 80px; }
+.accordion li{ margin-bottom: 10px; border: 1px solid #e5e5e5; }
+.accordion a{ display: block; padding: 13px; color: gray; border-bottom: 1px solid #e5e5e5; }
+.accordion a span{ float: right; }
+.accordion a img{ vertical-align: middle; margin-right: 20px; margin-top: 0;}
+.accordion p{ padding: 13px; color: #999; font: italic 300 15px/24px var(--rob); display: none;}
+.accordion li:first-child p{ display: block;}
+
+
+.wrap-7{ background: #f8f8f8; padding: 70px 0; }
+.reviews{ padding: 0 110px; position: relative;}
+.pic{ width: 150px; flex-shrink: 0; aspect-ratio: 1/1; border: 2px solid var(--g); display: grid; place-items: center; margin-right: 60px;}
+.reviews button{ border: none; background: none; top: 50%; }
+.prev{ position: absolute; left: 0;}
+.next{ position: absolute; right: 0;}
+
+
+.wrap-8{ padding: 90px 0; text-align: center;}
+.box{ position: relative; margin: 80px 0  30px;}
+.over{ position: absolute; inset: 0; background: var(--grad); opacity: .9; place-items: center; color: #fff; display: grid; transition: .3s; opacity: 0; visibility: hidden;}
+.box:hover .over{  opacity: .9; visibility: visible;  box-shadow: 10px 10px var(--g);}
+.social li:not(:first-child){ border-left: 1px solid var(--r); }
+.social a{ display: block; width: 56px; line-height: 56px; text-align: center; background: var(--y); color: var(--r);}
+.social li:hover a{ background: var(--r); color: var(--y);}
+
+
+.wrap-9{ background: #f8f8f8; padding: 70px 0; }
+
+.wrap-10{ text-align: center; padding: 90px 0;}
+
+
 /* responsive s*/
 @media screen and (max-width:1250px){
     html{ font-size: 13px;}
@@ -134,6 +171,7 @@ section  h2{ font-size: 30px; margin: 23px 0 41px;}
      .col-m-12{ flex-basis: 100%; max-width: 100%;}
      .wrap-1 .lg {font: 700 6rem / 6rem var(--mont)}
      .icons li{ margin: 0 10px;} 
+     .iphone{ position: absolute; right: 0; bottom: -70px; transform: translate(0px, 0); max-width: 50%; }
  }
  @media screen and (max-width:460px){
      .col-p-1{ flex-basis: 8.33%; max-width: 8.33%;}
